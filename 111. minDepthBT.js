@@ -1,0 +1,18 @@
+function minDepth(root) {
+  if (!root) {
+    return 0;
+  }
+
+  const queue = [[root, 1]];
+
+  while (queue.length) {
+    const [node, depth] = queue.shift();
+
+    if (!node.left && !node.right) {
+      return depth;
+    }
+
+    node.left && queue.push([node.left, depth + 1]);
+    node.right && queue.push([node.right, depth + 1]);
+  }
+}
