@@ -11,7 +11,7 @@ function threeSum(nums) {
     let right = nums.length - 1;
 
     while (left < right) {
-      let sum = n + nums[left] + nums[right];
+      const sum = n + nums[left] + nums[right];
       if (sum === 0) {
         result.push([n, nums[left], nums[right]]);
         left++;
