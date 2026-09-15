@@ -16,6 +16,7 @@ function fourSum(nums, target) {
       }
       return;
     }
+
     let left = start;
     let right = nums.length - 1;
 
